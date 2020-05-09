@@ -1,8 +1,8 @@
 /*
  * @Github: https://github.com/wangjiawei2019
  * @Date: 2020-04-20 16:14:58
- * @LastEditors: wjw
- * @LastEditTime: 2020-04-20 16:58:08
+ * @LastEditors: wangjiawei
+ * @LastEditTime: 2020-05-05 13:57:46
  */
 import axios from 'axios'
 import qs from 'qs'
@@ -143,19 +143,3 @@ export const post = (url, data, config = {}) => {
       })
   })
 }
-
-/* 或者写成下面这样： Promise.resolve() 和 Promise.reject()返回的是promise对象，二者都是语法糖  */
-// export const post = (url, data, config = {}) => {
-//   return instance({
-//     method: 'post',
-//     url,
-//     data,
-//     ...config,
-//   })
-//     .then((response) => {
-//       return Promise.resolve(response)
-//     })
-//     .catch((error) => {
-//       return Promise.reject(error)
-//     })
-// }
